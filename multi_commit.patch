@@ -1,0 +1,175 @@
+From a30c19e3f13765a3b48829788bc1cb8b4e95cee4 Mon Sep 17 00:00:00 2001
+From: The Octocat <octocat@nowhere.com>
+Date: Tue, 4 Feb 2014 14:38:24 -0800
+Subject: [PATCH 1/5] Created index page for future collaborative edits
+
+---
+ index.html | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 index.html
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..a83618b
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,20 @@
++<!DOCTYPE html>
++
++<html>
++<head>
++  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
++  <title>Spoon-Knife</title>
++  <LINK href="styles.css" rel="stylesheet" type="text/css">
++</head>
++
++<body>
++
++<img src="forkit.gif" id="octocat" alt="" />
++
++<!-- Feel free to change this text here -->
++<p>
++  Fork me? Fork you, @octocat!
++</p>
++
++</body>
++</html>
+-- 
+2.45.1.windows.1
+
+
+From bb4cc8d3b2e14b3af5df699876dd4ff3acd00b7f Mon Sep 17 00:00:00 2001
+From: The Octocat <octocat@nowhere.com>
+Date: Tue, 4 Feb 2014 14:38:36 -0800
+Subject: [PATCH 2/5] Create styles.css and updated README
+
+---
+ README.md  |  9 +++++++++
+ styles.css | 17 +++++++++++++++++
+ 2 files changed, 26 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 styles.css
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..0350da3
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,9 @@
++### Well hello there!
++
++This repository is meant to provide an example for *forking* a repository on GitHub.
++
++Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
++
++After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
++
++For some more information on how to fork a repository, [check out our guide, "Fork a Repo"](https://help.github.com/articles/fork-a-repo). Thanks! :sparkling_heart:
+diff --git a/styles.css b/styles.css
+new file mode 100644
+index 0000000..9b85284
+--- /dev/null
++++ b/styles.css
+@@ -0,0 +1,17 @@
++* {
++  margin:0px;
++  padding:0px;
++}
++
++#octocat {
++  display: block;
++  width:384px;
++  margin: 50px auto;
++}
++
++p {
++  display: block;
++  width: 400px;
++  margin: 50px auto;
++  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
++}
+-- 
+2.45.1.windows.1
+
+
+From d0dd1f61b33d64e29d8bc1372a94ef6a2fee76a9 Mon Sep 17 00:00:00 2001
+From: The Octocat <octocat@nowhere.com>
+Date: Wed, 12 Feb 2014 15:20:44 -0800
+Subject: [PATCH 3/5] Pointing to the guide for forking
+
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index 0350da3..f479026 100644
+--- a/README.md
++++ b/README.md
+@@ -6,4 +6,4 @@ Creating a *fork* is producing a personal copy of someone else's project. Forks
+ 
+ After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
+ 
+-For some more information on how to fork a repository, [check out our guide, "Fork a Repo"](https://help.github.com/articles/fork-a-repo). Thanks! :sparkling_heart:
++For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
+-- 
+2.45.1.windows.1
+
+
+From 3f316491b1e4ce3b25210a64e5d4087c32a05e10 Mon Sep 17 00:00:00 2001
+From: karimtz999 <farkarim36@gmail.com>
+Date: Thu, 23 May 2024 03:24:40 +0100
+Subject: [PATCH 4/5] task1
+
+---
+ client3.py | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 client3.py
+
+diff --git a/client3.py b/client3.py
+new file mode 100644
+index 0000000..e69de29
+-- 
+2.45.1.windows.1
+
+
+From 06859ad9bcb19148f48a268158aca4eb0ec1d237 Mon Sep 17 00:00:00 2001
+From: karimtz999 <farkarim36@gmail.com>
+Date: Fri, 24 May 2024 15:42:06 +0100
+Subject: [PATCH 5/5] Task 1
+
+---
+ client3.py | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+diff --git a/client3.py b/client3.py
+index e69de29..ec98c5b 100644
+--- a/client3.py
++++ b/client3.py
+@@ -0,0 +1,24 @@
++def getDaapoint(qoute):
++    stock = quote['stock']
++    bid_price = floate(qoute['top_bid']['price'])
++    ask_price = floate(qoute['top_ask']['price'])
++    price = (bid_price + ask_price)/2
++    return stock, bid_price, ask_price, price
++
++def getRatio(price_a, price_b):
++    if(price_b == 0):
++        return
++    return price_a/price_b
++
++#main
++
++if __name__ == "__main__":
++    for  __ in iter(range(N)):
++    quotes = json.loads(urllib.request.urllopen(query.format(random.random())).read)
++    prices = {}
++    for qoute in qoutes:
++        stock,bid_price,ask_price = getDaraPoint(qoute)
++        print("qouted %s at (bid: %s , ask: %s , price: %s)"%(stock,bid_price, ask_price, price))
++
++    print("Ratio %s" % grtRatio(prices["ABC"], prices["DFE"]))
++    
+-- 
+2.45.1.windows.1
+
